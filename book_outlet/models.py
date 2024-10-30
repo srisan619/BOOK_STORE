@@ -10,7 +10,7 @@ class Book(models.Model):
     author = models.CharField(null=True, max_length=100)
     is_bestselling = models.BooleanField(default=False)
     # Harry Potter 1 => harry-potter-1
-    slug = models.SlugField(default="", null=False)
+    slug = models.SlugField(default="", null=False, db_index=True)
 
     def __str__(self):
         return f"{self.id} {self.title} ({self.rating}) {self.is_bestselling} {self.author} {self.slug}"
