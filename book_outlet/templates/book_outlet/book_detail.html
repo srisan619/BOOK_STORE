@@ -3,6 +3,7 @@
 {% block title %}{{title}}{% endblock  %}
 
 {% block content %}
+    <a href="{% url "book-index" %}">All Books</a>
     <h1>{{title}}</h1>
     <h2>{{author}}</h2>
     <p>The book has a rating of {{rating}}</p>
